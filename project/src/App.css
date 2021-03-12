@@ -1,38 +1,285 @@
 .App {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  max-width: 500px;
+  height: 100vh;
+  max-height: 800px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#phone {
   display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: center;
+  background: white;
+  border: 3px solid #bbb;
+  border-radius: 20px;
+  padding: 15px 5px;
+  text-align: center;
+}
+
+#camera {
+  position: relative;
+  top: 0.5rem;
+  left: -80px;
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 2px solid grey;
+  background: #ccc;
+  border-radius: 0.5rem;
+}
+
+#speakers {
+  display: flex;
+  position: relative;
+  width: 6rem;
+  height: 0.5rem;
+  border: 2px solid grey;
+  background: grey;
+  border-radius: 5px;
+}
+
+#screen {
+  border: 1px solid grey;
+  width: 95%;
+  height: 100%;
+  margin: 1em;
+  overflow: scroll;
+}
+
+#homebutton {
+  display: flex;
+
+  align-self: center;
+  border: 2px solid grey;
+  border-radius: 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+#screen img {
+  width: 1rem;
+}
+
+.title,
+.sub-title {
+  text-transform: uppercase;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.icon-container {
+  margin: 20px auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 20%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: #ececec;
+  position: relative;
+}
+
+.icon-container h2 {
+  display: flex;
+  align-self: center;
+}
+
+.envelope {
+  background-color: #3267d5;
+  width: 150px;
+  height: 90px;
+  margin: 0 auto 20px auto;
+  border-top: 2px solid #ececec;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-self: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.envelope .envelope-left {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 135px 85px 0;
+  border-color: transparent transparent #2ab6f6 transparent;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.envelope .envelope-right {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 85px 135px;
+  border-color: transparent transparent #81d2f9 transparent;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.envelope-top {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 75px 55px 75px;
+  border-color: transparent transparent #2a55c5 transparent;
+  position: absolute;
+  top: 13px;
+  left: 25px;
+  animation: flip 6s linear infinite;
+  perspective: 500px;
+  transform-origin: 100% 100%;
+}
+
+@keyframes flip {
+  0%,
+  60% {
+    transform: rotate3d(1, 0, 0, 180deg);
   }
-  to {
-    transform: rotate(360deg);
+  60%,
+  100% {
+    transform: rotate3d(1, 0, 0, 0deg);
+  }
+}
+
+.portfolio {
+  width: 45px;
+  height: 75px;
+  border-radius: 50px;
+  position: absolute;
+  top: 15px;
+  left: 78px;
+}
+.portfolio.orange {
+  background-color: rgba(243, 156, 18, 0.7);
+  z-index: 1;
+}
+.portfolio.yellow {
+  background-color: rgba(241, 196, 15, 0.7);
+  transform-origin: 55% 100%;
+  transform: rotate(45deg);
+}
+.portfolio.green {
+  background-color: rgba(46, 204, 113, 0.7);
+  transform-origin: 55% 105%;
+  transform: rotate(90deg);
+}
+.portfolio.lightBlue {
+  background-color: rgba(27, 188, 155, 0.7);
+  transform-origin: 52.5% 105%;
+  transform: rotate(135deg);
+}
+.portfolio.blue {
+  background-color: rgba(65, 131, 215, 0.7);
+  transform-origin: 50% 105%;
+  transform: rotate(180deg);
+}
+.portfolio.purple {
+  background-color: rgba(102, 51, 153, 0.7);
+  transform-origin: 47.5% 105%;
+  transform: rotate(225deg);
+}
+.portfolio.violet {
+  background-color: rgba(155, 89, 182, 0.7);
+  transform-origin: 45% 105%;
+  transform: rotate(270deg);
+}
+.portfolio.red {
+  background-color: rgba(242, 38, 19, 0.7);
+  transform-origin: 45% 102.5%;
+  transform: rotate(315deg);
+}
+
+/* monitor */
+
+.iMac {
+  max-width: 1000px;
+  max-height: 800px;
+  margin: 50px auto;
+  position: relative;
+}
+
+.iMac .body {
+  height: 100vh;
+  background: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0px -2px 0px #909090;
+}
+
+.iMac .body .shine {
+  width: 0;
+  height: 0;
+  border-top: 75px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 75px solid transparent;
+  border-left: 140px solid transparent;
+  border-right: 140px solid rgba(255, 255, 255, 0.04);
+  position: absolute;
+}
+
+.iMac .body .screen {
+  height: 96vh;
+  width: 100vw;
+  border: 10px solid #000;
+  background: #101010;
+  overflow: hidden;
+  transition: background 0.5s;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.iMac .body .screen h1 {
+  padding-top: 58px;
+  text-align: center;
+  font-size: 150%;
+  opacity: 0;
+  transition: opacity 0.5s 0.5s;
+  color: #fff;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.iMac .body:hover .screen {
+  background: #444;
+}
+
+.iMac .body:hover .screen h1 {
+  opacity: 1;
+}
+
+.iMac .body .logo {
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  background: #bbb;
+  margin: 5px auto 0 auto;
+  box-shadow: inset 0px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.iMac .stand {
+  width: 50px;
+  height: 25px;
+  background: #aeaeae;
+  border: 20px solid #67d6bd;
+  border-top: 0;
+  border-bottom: 20px solid #c5c5c5;
+  border-radius: 5px;
+  box-shadow: 0px 4px 0px -2px #909090;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 550px) {
+  #phone {
+    transition: 2ms ease-in-out;
+    display: none;
   }
 }
