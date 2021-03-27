@@ -15,6 +15,8 @@
 	box-sizing: content-box !important;
 }
 .device .screen {
+	display: flex;
+
 	width: 100%;
 	position: relative;
 	height: 100%;
@@ -94,8 +96,8 @@
 	position: absolute;
 	display: block;
 	content: "";
-	top: 50%;
-	left: 50%;
+	top: 47%;
+	left: 47%;
 }
 .device.ipad.landscape {
 	height: 576px;
