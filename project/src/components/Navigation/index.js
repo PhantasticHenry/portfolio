@@ -4,6 +4,8 @@ import Envelope from "./icons/Envelope";
 import Portfolio from "./icons/Portfolio";
 import FindMe from "./icons/FindMe";
 import Me from "./icons/Me";
+import Linkedin from "./icons/Linkedin";
+import Twitter from "./icons/Twitter";
 
 function Navigation() {
 	return (
@@ -12,6 +14,8 @@ function Navigation() {
 			<Portfolio />
 			<FindMe />
 			<Me />
+			<Linkedin />
+			<Twitter />
 		</div>
 	);
 }
