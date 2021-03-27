@@ -8,20 +8,16 @@
 .device {
 	display: flex;
 	align-self: center;
-
-	/* display: inline-block; */
 	position: relative;
 	-webkit-box-sizing: content-box !important;
 	box-sizing: content-box !important;
 }
 .device .screen {
-	display: flex;
-
 	width: 100%;
 	position: relative;
 	height: 100%;
 	z-index: 3;
-	background: white;
+	background: black;
 	overflow: hidden;
 	display: block;
 	border-radius: 1px;
@@ -51,7 +47,7 @@
 	border-radius: 44px;
 	transition: 2s ease-in-out;
 }
-.device.:before {
+.device:before {
 	width: calc(100% - 8px);
 	height: calc(100% - 8px);
 	position: absolute;
