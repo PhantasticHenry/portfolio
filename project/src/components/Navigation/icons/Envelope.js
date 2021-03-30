@@ -9,7 +9,7 @@ function Envelope() {
 					<div className="envelope-right"></div>
 				</div>
 				<div className="envelope-top"></div>
-				<h2>Email Me</h2>
+				<h3>Email Me</h3>
 			</div>
 		</div>
 	);

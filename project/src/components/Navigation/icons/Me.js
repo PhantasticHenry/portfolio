@@ -8,7 +8,7 @@ function Me() {
 				<div className="me">
 					<img src={me} alt="It's Henry" />
 				</div>
-				<h2>About Me</h2>
+				<h3>About Me</h3>
 			</div>
 		</div>
 	);

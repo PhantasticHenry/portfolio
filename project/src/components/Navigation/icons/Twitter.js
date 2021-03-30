@@ -2,9 +2,11 @@ import React from "react";
 
 function Twitter() {
 	return (
-		<div className="icon-container">
-			<div className="twitter"></div>
-		</div>
+		<a href="https://twitter.com/PhantasticHenry">
+			<div className="icon-container">
+				<div className="twitter"></div>
+			</div>
+		</a>
 	);
 }
 

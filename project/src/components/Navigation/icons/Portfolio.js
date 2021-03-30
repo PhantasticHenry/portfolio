@@ -12,7 +12,7 @@ function Portfolio() {
 				<div className="portfolio purple"></div>
 				<div className="portfolio violet"></div>
 				<div className="portfolio red"></div>
-				<h2>Portfolio</h2>
+				<h3>Portfolio</h3>
 			</div>
 		</div>
 	);

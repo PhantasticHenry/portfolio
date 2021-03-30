@@ -13,7 +13,7 @@ function FindMe() {
 						</div>
 					</div>
 				</div>
-				<h2>Find Me</h2>
+				<h3>Find Me</h3>
 			</div>
 		</div>
 	);
