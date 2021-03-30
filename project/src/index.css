@@ -1,32 +1,61 @@
 * {
-	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-	color: #fff;
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 :root {
-	--fs-h1: 2em;
-	--fs-h2: 1.8em;
-	--fs-h3: 1.6em;
-	--fs-h4: 1.5em;
-	--fs-p: 1.2em;
+	--fw-reg: 300;
+	--fw-bold: 500;
 
-	--clr-primary: rgb(87, 236, 87);
-	--clr-light: #fff;
-}
-body {
-	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+	--ff-reg: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
 		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
 		sans-serif;
+	--ff-code: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+
+	--fs-h1: 3rem;
+	--fs-h2: 2.25rem;
+	--fs-h3: 1.23rem;
+	--fs-body: 1rem;
+	--fs-btn: 1rem;
+
+	--clr-light: #fff;
+	--clr-dark: #000;
+	--clr-accent: rgba(44, 192, 7, 1);
+}
+@media (min-width: 800px) {
+	:root {
+		--fs-h1: 4.5rem;
+		--fs-h2: 3.75rem;
+		--fs-h3: 1.5rem;
+		--fs-body: 1.125rem;
+		--fs-btn: 3rem;
+	}
+}
+body {
+	background-color: var(--clr-dark);
+	color: var(--clr-light);
+	font-size: var(--fs-body);
+	font-family: var(--ff-reg);
+	line-height: 1.6;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-size: 1em;
-	background-color: black;
+}
+img {
+	display: block;
+	max-width: 100%;
 }
 code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-		monospace;
+	font-family: var(--ff-code);
+}
+h1,
+h2,
+h3 {
+	line-height: 1.1;
+	margin: 0;
 }
 h1 {
 	font-size: var(--fs-h1);
@@ -37,9 +66,6 @@ h2 {
 h3 {
 	font-size: var(--fs-h3);
 }
-h4 {
-	font-size: var(--fs-h4);
-}
-p {
-	font-size: var(--fs-p);
+button {
+	font-size: var(--fs-btn);
 }
