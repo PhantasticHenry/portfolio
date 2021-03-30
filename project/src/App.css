@@ -1,8 +1,14 @@
+.hide {
+	display: none;
+	width: 100vw;
+	height: 100vh;
+}
 .device-container {
 	position: relative;
 	display: flex;
 	justify-content: center;
-	height: 90vh;
+	/* height: 90vh; */
+	height: 100vh;
 }
 
 .device {
@@ -16,7 +22,7 @@
 	width: 100%;
 	position: relative;
 	height: 100%;
-	z-index: 3;
+	z-index: 1;
 	background: black;
 	overflow: hidden;
 	display: block;
@@ -40,8 +46,12 @@
 	position: absolute;
 }
 .device.ipad {
-	width: 576px;
-	height: 768px;
+	/* width: 576px;
+	height: 768px; */
+	/* width: 60vw;
+	height: 70vh; */
+	width: 94%;
+	height: 87%;
 	padding: 90px 25px;
 	background: #242324;
 	border-radius: 44px;
@@ -81,6 +91,7 @@
 	left: 50%;
 	margin-left: -25px;
 	bottom: 22px;
+	cursor: pointer;
 }
 .device.ipad .home:after {
 	width: 15px;
@@ -130,7 +141,9 @@
 	/* width: 960px;
 	height: 600px; */
 	width: 87%;
-	height: 87%;
+	max-height: 75%;
+	/* width: 87%;
+	height: 87%; */
 	padding: 44px 44px 76px;
 	margin: 0 auto;
 	background: #bebebe;
