@@ -1,10 +1,11 @@
 #Navigation {
 	display: flex;
-	flex-direction: column;
+	/* flex-direction: column; */
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	align-content: center;
 	height: 100%;
+	/* height: 67.5vh; */
 	width: 100%;
 	margin: 0 auto;
 }
@@ -24,13 +25,15 @@
 	position: relative;
 	overflow: hidden;
 	cursor: pointer;
+	transition: 0.5s ease-in-out;
+	box-shadow: 0 0 3em rgba(255, 255, 255, 0.2); /* Maybe use box-shadow*/
 }
 .icon-container:focus,
 .icon-container:hover {
 	transition: 0.5s ease-in-out;
 	box-shadow: 0 0 3em rgba(255, 255, 255, 0.6); /* Maybe use box-shadow*/
 }
-.icon-container h2 {
+.icon-container h3 {
 	display: flex;
 	align-self: center;
 }
@@ -84,7 +87,7 @@
 	border-width: 0 75px 55px 75px;
 	border-color: transparent transparent #2a55c5 transparent;
 	position: absolute;
-	top: 6px;
+	top: 15px;
 	left: 25px;
 	animation: flip 6s linear infinite;
 	perspective: 500px;
@@ -102,7 +105,7 @@
 	border-radius: 10%;
 	animation: up 6s linear infinite;
 	outline: 2px solid #2a55c5;
-	outline-offset: -18px;
+	outline-offset: -22px;
 }
 @keyframes up {
 	0%,
@@ -246,6 +249,7 @@
 	letter-spacing: -1px;
 	border-radius: 20%;
 	padding: 2px 6px;
+	user-select: none;
 }
 .me {
 	display: flex;
@@ -267,7 +271,7 @@
 	width: 100%;
 	border: none;
 	/* border-radius: 15%; */
-	font-size: 0.9em;
+	font-size: 0.8em;
 	background-color: #4aa5f0;
 }
 .twitter:before {
@@ -329,6 +333,18 @@
       border: 5px solid darken($colour, 10%);
     }
   } */
+
+@media only screen and (max-width: 799px) {
+	.envelope-top {
+		top: 19px;
+	}
+	.twitter {
+		font-size: 0.9em;
+	}
+	.linkedin {
+		font-size: 14em;
+	}
+}
 
 /* testing */
 #dock-container {
