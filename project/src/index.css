@@ -36,7 +36,8 @@
 	}
 }
 body {
-	background-color: var(--clr-dark);
+	/* background-color: var(--clr-dark); */
+	background-image: url("./images/micro_carbon.png");
 	color: var(--clr-light);
 	font-size: var(--fs-body);
 	font-family: var(--ff-reg);
@@ -68,4 +69,32 @@ h3 {
 }
 button {
 	font-size: var(--fs-btn);
+}
+/* Flex classes and properties */
+.flex {
+	display: flex;
+}
+.flex-jc-start {
+	justify-content: flex-start;
+}
+.flex-jc-center {
+	justify-content: center;
+}
+.flex-jc-end {
+	justify-content: flex-end;
+}
+.flex-jc-se {
+	justify-content: space-evenly;
+}
+.flex-ac-start {
+	align-content: flex-start;
+}
+.flex-ac-center {
+	align-content: center;
+}
+.flex-ac-end {
+	align-content: flex-end;
+}
+.flex-wrap {
+	flex-wrap: wrap;
 }
