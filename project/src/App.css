@@ -1,3 +1,46 @@
+.flex {
+	display: flex;
+}
+.flex-center {
+	justify-content: center;
+	align-self: center;
+}
+.page {
+	/* display: flex;
+	justify-content: center;
+	flex-wrap: wrap; */
+	display: flex;
+	flex-wrap: wrap;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+.page-enter {
+	/* display: flex; */
+	opacity: 0;
+	transform: scale(1.1);
+}
+
+.page-enter-active {
+	/* display: flex; */
+	opacity: 1;
+	transform: scale(1);
+	transition: opacity 300ms, transform 300ms;
+}
+
+.page-exit {
+	/* display: flex; */
+	opacity: 1;
+	transform: scale(1);
+}
+
+.page-exit-active {
+	/* display: flex; */
+	opacity: 0;
+	transform: scale(0.9);
+	transition: opacity 300ms, transform 300ms;
+}
 .hide {
 	display: none;
 	width: 100vw;
@@ -7,7 +50,7 @@
 	position: relative;
 	display: flex;
 	justify-content: center;
-	/* height: 90vh; */
+	align-items: flex-start;
 	height: 100vh;
 }
 
@@ -288,4 +331,22 @@
 }
 .device.macbook .home {
 	display: none;
+}
+.mobile {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.mobile .screen {
+	width: 100%;
+	/* position: relative; */
+	height: 100%;
+	z-index: 1;
+	background: black;
+	overflow: hidden;
+	display: flex;
+	flex-wrap: wrap;
+	/* border-radius: 1px; */
+	/* -webkit-box-shadow: 0 0 0 3px #111;
+	box-shadow: 0 0 0 3px #111; */
 }
