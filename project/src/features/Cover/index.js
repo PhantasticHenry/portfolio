@@ -8,24 +8,26 @@ function Cover() {
 	const [on, setOn] = useState(false);
 
 	return (
-		<div id="Cover">
-			<NavLink to="/home" className="flex flex-center">
-				<button
-					className={
-						on
-							? `btn btn--clr-dark btn--bs-power on`
-							: `btn btn--clr-dark btn--bs-power off`
-					}
-					onClick={() => setOn(!on)}
+		<div id="Cover" className="cover">
+			<button
+				className={
+					on
+						? `btn btn--clr-dark btn--bs-power on`
+						: `btn btn--clr-dark btn--bs-power off`
+				}
+				onClick={() => setOn(!on)}
+			>
+				<span></span>
+				<IconContext.Provider
+					value={{
+						className: on ? "power on" : "power off",
+					}}
 				>
-					<span></span>
-					<IconContext.Provider
-						value={{ className: on ? "icon__power on" : "icon__power off" }}
-					>
+					<NavLink to="/welcome" className="flex-center">
 						<FaPowerOff />
-					</IconContext.Provider>
-				</button>
-			</NavLink>
+					</NavLink>
+				</IconContext.Provider>
+			</button>
 		</div>
 	);
 }
