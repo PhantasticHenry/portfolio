@@ -45,14 +45,14 @@ function App() {
 	// );
 	const routes = [
 		{ path: "/power-button", Component: Cover },
-		{ path: "/home", Component: Navigation },
+		{ path: "/welcome", Component: Navigation },
 		{ path: "/about", Component: AboutMe },
 		{ path: "/email", Component: Email },
 	];
 
 	return (
 		<div className="device-container">
-			<div className={deviceClassName()}>
+			{/* <div className={deviceClassName()}>
 				{isDesktop ? (
 					<>
 						<div className="top-bar"></div>
@@ -63,28 +63,28 @@ function App() {
 						<div className="speaker"></div>
 					</>
 				) : null}
-				<div className="screen">
-					{routes.map(({ path, Component }) => (
-						<Route key={path} exact path={path}>
-							{({ match }) => (
-								<CSSTransition
-									in={match != null}
-									timeout={timeout}
-									// timeout={500}
-									classNames="page"
-									unmountOnExit
-								>
-									<div className="page">
-										<Component />
-									</div>
-								</CSSTransition>
-							)}
-						</Route>
-					))}
-				</div>
+				<div className="screen"> */}
+			{routes.map(({ path, Component }) => (
+				<Route key={path} exact path={path}>
+					{({ match }) => (
+						<CSSTransition
+							in={match != null}
+							timeout={timeout}
+							// timeout={500}
+							classNames="page"
+							unmountOnExit
+						>
+							<div className="page">
+								<Component />
+							</div>
+						</CSSTransition>
+					)}
+				</Route>
+			))}
+			{/* </div>
 				<div className="home"></div>
 				<div className="bottom-bar"></div>
-			</div>
+			</div> */}
 		</div>
 	);
 }
