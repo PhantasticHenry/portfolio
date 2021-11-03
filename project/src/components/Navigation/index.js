@@ -10,35 +10,43 @@ import { NavLink } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 
 function Navigation() {
+	const [hover, setHover] = useState(false);
 	const timeout = { enter: 800, exit: 400 };
 	const navLinks = [
 		{ to: "/about", Icon: Me },
 		{ to: "/email", Icon: Envelope },
+		{ to: "/#portfolio", Icon: Portfolio },
+		{ to: "/#find-me", Icon: FindMe },
+		{ to: "/#twitter", Icon: Twitter },
+		{ to: "/#linkedin", Icon: Linkedin },
 	];
+
 	return (
-		<nav id="Navigation" className="flex flex-jc-se flex-ac-center flex-wrap">
+		<nav
+			id="Navigation"
+			className="flex flex-jc-se flex-ac-center flex-wrap"
+			style={hover ? { background: "pink" } : { background: "" }}
+		>
 			{navLinks.map(({ to, Icon }) => (
 				<CSSTransition
 					in={to != null}
 					timeout={timeout}
 					unmountOnExit
-					classNames="tIn"
+					classNames="nav tIn"
+					onMouseOver={() => setHover(true)}
+					onMouseLeave={() => setHover(false)}
 				>
 					<NavLink to={to} activeClassName="selected">
 						<Icon />
 					</NavLink>
 				</CSSTransition>
 			))}
-			{/* <NavLink to="/about" activeClassName="selected">
-				<Me />
-			</NavLink>
-			<NavLink to="/email" activeClassName="selected">
-				<Envelope />
-			</NavLink> */}
-			<Portfolio />
-			<FindMe />
-			<Linkedin />
-			<Twitter />
+			{/* <div className="nav">
+				<Portfolio />
+				<FindMe />
+				<Linkedin />
+				<Twitter />
+			</div> */}
 		</nav>
 	);
 }
