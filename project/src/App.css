@@ -5,12 +5,16 @@
 	justify-content: center;
 	align-self: center;
 }
+.device-container {
+	display: grid;
+	align-items: center;
+	min-width: 500px;
+	position: relative;
+	height: 100vh;
+}
 .page {
 	/* display: flex;
-	justify-content: center;
 	flex-wrap: wrap; */
-	display: flex;
-	flex-wrap: wrap;
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -46,16 +50,9 @@
 	width: 100vw;
 	height: 100vh;
 }
-.device-container {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-	height: 100vh;
-}
 
 .device {
-	display: flex;
+	/* display: flex; */
 	align-self: center;
 	position: relative;
 	-webkit-box-sizing: content-box !important;
